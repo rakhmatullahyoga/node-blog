@@ -11,8 +11,8 @@ A simple blog application using Node.js and mongodb as the database. User can vi
 You need Node.js and mongodb installed globally:
 
 ```sh
-$ git clone https://github.com/rakhmatullahyoga/nodejs-blog.git
-$ cd dillinger
+$ git clone https://github.com/rakhmatullahyoga/node-blog.git
+$ cd node-blog
 $ mongod --dbpath data
 $ npm start
 ```
