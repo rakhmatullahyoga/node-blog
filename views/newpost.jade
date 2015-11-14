@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    .wrapper
+      nav.nav
+        a#logo(style='border:none;')
+          h1
+            | Simple
+            span -
+            | Blog
+      article.art.simple.post
+        h2.art-title(style='margin-bottom:40px') -
+        .art-body
+          .art-body-inner
+            h2 Tambah Post
+            #contact-area
+              form(method='post', action='/addpost')
+                label(for='Judul') Judul:
+                input#Judul(type='text', name='Judul')
+                label(for='Konten') Konten:
+                br
+                textarea#Konten(name='Konten', rows='20', cols='20')
+                input.submit-button(type='submit', name='submit', value='Simpan')
+      footer.footer
+        .back-to-top
+          a(href='') Back to top
+        // <div class="footer-nav"><p></p></div>
+        .psi Ψ
+        aside.offsite-links
+          | PT. GITS Indonesia
+    script(type='text/javascript', src='javascripts/fittext.js')
+    script(type='text/javascript', src='javascripts/app.js')
+    script(type='text/javascript', src='javascripts/respond.min.js')
+    link(rel='stylesheet', type='text/css', href='stylesheets/screen.css')
+    script(type='text/javascript').
+      var ga_ua = '{{! TODO: ADD GOOGLE ANALYTICS UA HERE }}';
+      (function(g,h,o,s,t,z){g.GoogleAnalyticsObject=s;g[s]||(g[s]=
+      function(){(g[s].q=g[s].q||[]).push(arguments)});g[s].s=+new Date;
+      t=h.createElement(o);z=h.getElementsByTagName(o)[0];
+      t.src='//www.google-analytics.com/analytics.js';
+      z.parentNode.insertBefore(t,z)}(window,document,'script','ga'));
+      ga('create',ga_ua);ga('send','pageview');

@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    .container
+      .blog-header
+        h1.blog-title Blog
+        p.lead.blog-description The Official Blog of PT GITS Indonesia.
+      .row
+        .col-sm-8.blog-main
+          each post, i in postlist
+            .blog-post
+              a(class="blog-post-title") #{post.judul}
+              p.blog-post-meta #{post._id.getTimestamp()}
+              p #{post.konten}
+              //p.blog-post-meta #{post.comments.length} komentar
+            // /.blog-post
+        // /.blog-main
+        .col-sm-3.col-sm-offset-1.blog-sidebar
+        // /.blog-sidebar
+      // /.row
+    // /.container
+    footer.blog-footer
+      p
+        | The Official Blog of 
+        a(href='http://www.gits.co.id/') PT GITS Indonesia
+      p
+        a(href='#') Back to top
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='/javascripts/ie10-viewport-bug-workaround.js')
+    link(href='/stylesheets/blog.css', rel='stylesheet')
