@@ -1,4 +1,4 @@
-# Node Blog
+# Simple Node.js Blog
 
 A simple blog application using Node.js and mongodb as the database. User can view many post in the blog, which is managed by admin. Admin can post or delete a blog post.
 
